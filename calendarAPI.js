@@ -31,16 +31,6 @@ function updateSigninStatus(isSignedIn) {
   }
 }
 
-function handleSignInClick(event) {
-  // Ideally the button should only show up after gapi.client.init finishes, so that this
-  // handler won't be called before OAuth is initialized.
-  gapi.auth2.getAuthInstance().signIn();
-}
-
-function handleSignOutClick(event) {
-  gapi.auth2.getAuthInstance().signOut();
-}
-
 function appendPre(message) {
   var pre = document.getElementById('content');
   var textContent = document.createTextNode(message + '\n');
@@ -60,7 +50,7 @@ function makeApiCall() {
     var userGoals = response.result && response.result.items && processEventsVsGoals(response.result.items);
     if (userGoals.length > 0) {
       userGoals.forEach(function(goal){
-        appendPre(goal.name + ' (' + goal.goalMet + ')');
+        appendPre(goal.name + ' (' + (goal.thisPeriodEventCount / goal.frequency) * 100 + '%)');
       })
       
     } else {

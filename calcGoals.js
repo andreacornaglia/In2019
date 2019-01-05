@@ -4,15 +4,13 @@ var userGoals = [
     name: 'practice more yoga',
     keywords: ['yoga', 'vinyasa'],
     frequency: 1,
-    thisPeriodEventCount: 0,
-    goalMet: false
+    thisPeriodEventCount: 0
   },
   {
     name: 'go to more cultural events',
     keywords: ['movie', 'film', 'concert', 'show', 'exhibit'],
     frequency: 1,
-    thisPeriodEventCount: 0,
-    goalMet: false
+    thisPeriodEventCount: 0
   }
 ];
 
@@ -42,10 +40,6 @@ function processEventsVsGoals(events){
           goal.thisPeriodEventCount++;
         }           
       });
-      
-      if(goal.thisPeriodEventCount >= goal.frequency){
-        goal.goalMet = true;
-      }
     });
   }
   

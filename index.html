@@ -1,29 +1,35 @@
 <!doctype html>
 <html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>in 2019</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>in 2019</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-  <p>In 2019 I want to...</p>
-  <script src="moment.min.js"></script>
-  <script src="calcGoals.js"></script>
-  <script src="calendarAPI.js"></script>
-  <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-  </script>
-  
-  <button id="signin-button" onclick="handleSignInClick()">Sign In</button>
-  <button id="signout-button" onclick="handleSignOutClick()">Sign Out</button>
-  
-  <pre id="content" style="white-space: pre-wrap;"></pre>
-  
-</body>
+  <body>
+    <script src="moment.min.js"></script>
+    <script src="calcGoals.js"></script>
+    <script src="calendarAPI.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+    <script src="userInteraction.js"></script>
+    
+    <header>
+      <p>In 2019 I want to...</p>
+      <button id="signin-button" onclick="handleSignInClick()">Sign In</button>
+      <button id="signout-button" onclick="handleSignOutClick()">Sign Out</button>
+    </header>
+    <section>
+      <p>So far this week...</p>
+      <pre id="content" style="white-space: pre-wrap;"></pre>
+    </section>
+    <footer>
+      <button id="addNewGoal-button" onclick="addNewGoal()">Add a new goal</button>
+    </footer>
+  </body>
 
 </html>
