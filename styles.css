@@ -1,0 +1,38 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  background-color: #6200EE;
+  color: white;
+}
+
+section {
+  margin: 10px 30px;
+}
+
+footer {
+  margin: 10px 30px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.addBtn {
+  background-color: #03DAC4;
+  padding: 10px;
+  border-radius: 5px;
+  color: #111;
+}

@@ -6,6 +6,8 @@
     <title>in 2019</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -20,17 +22,26 @@
     <script src="userInteraction.js"></script>
     
     <header>
-      <p>In 2019 I want to...</p>
-      <button id="signin-button" onclick="handleSignInClick()">Sign In</button>
-      <button id="signout-button" onclick="handleSignOutClick()">Sign Out</button>
+      <h3>In 2019 I want to...</h3>
+      <div>
+        <a href="#" id="signin-button" onclick="handleSignInClick()">Sign In</a>
+        <span>|</span>
+        <a href="#" id="signout-button" onclick="handleSignOutClick()">Sign Out</a>
+      </div>
     </header>
     <section>
       <p>So far this week...</p>
-      <pre id="content" style="white-space: pre-wrap;"></pre>
+      <div id="content" style="white-space: pre-wrap;"></div>
     </section>
     <footer>
-      <button id="addNewGoal-button" onclick="addNewGoal()">Add a new goal</button>
+      <a href="#" class="addBtn" id="addNewGoal-button" onclick="addNewGoal()">Add a new goal</button>
     </footer>
+    
+    <div id="addGoalForm">
+      
+    </div>
+    
+    
   </body>
 
 </html>
