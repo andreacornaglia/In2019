@@ -10,8 +10,8 @@ function initClient() {
   // OAuth 2.0 client ID and scopes (space delimited string) to request access.
   gapi.client.init({
     // 2. Initialize the JavaScript client library.
-    apiKey: 'AIzaSyD59SMf_x_WXo70XWPQGbJWTCv9wUavlmc',
-    clientId: '894627772510-dm635ps1iksqis1mj6188cq0tfg15s2s.apps.googleusercontent.com',
+    apiKey: API_KEY,
+    clientId: CLIENT_ID,
     discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"],
     scope: 'https://www.googleapis.com/auth/calendar.readonly'
   }).then(function () {
